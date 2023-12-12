@@ -3,21 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css">
-    <title>Workout Website</title>
+    <title>Blog</title>>
+    <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
+    <h1>blogging blog blog</h1>
+    <div id="api-interaction">
+        <form onsubmit="event.preventDefault(); createPost()">
+            <label for="project">Project:</label>
+            <input type="text" id="project" name="project" required>
 
-    <header>
-        <h1>Jon's Cool Awesome Blog About Blogging</h1>
-    </header>
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" required>
 
-    <div id="posts"></div>
+            <label for="content">Content:</label>
+            <textarea id="content" name="content" rows="4" required></textarea>
 
-    <footer>
-        <p>&copy; 2023 Jon's Cool Awesome Blog About Blogging. All rights reserved.</p>
-    </footer>
+            <button type="submit">Create Post</button>
+        </form>
 
+        <div id="output"></div>
+    </div>
+
+    <div id="posts">
+        <h2>All Posts</h2>
+        <div id="posts-container"></div>
+    </div>
     <script src="main.js"></script>
 </body>
 </html>
